@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>John Meaney &ndash; author</title>
+</head>
+<body>
+    <header id="top-banner">
+        <div id="author-name">
+            JOHN MEANEY
+        </div>
+        <div id="author-genres">
+            science fiction &tilde; dark fantasy &tilde; technothrillers
+        </div>
+    </header>
+    
+    <header id="burger-bar">
+        <div id="burger-icon">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+    </header>
+    
+    <nav id="topnav" class="initial-state">
+        <a href="index.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="praise.html">Praise</a> <!-- this page doesn't exist yet! -->
+        <a href="blog.html">News</a>
+        <a href="bio.html">About</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <!-- TO DO 
+
+    1) CREATE A BURGER ICON - done (not part of banner or navbar)
+    2) ADD AN EVENT HANDLER: makes nav links visible - done
+    3) CREATE A NAVBAR - done: navigable, responsive for mobile vs monitor
+    4) PUT AUTHOR NAME IN A BORDER WITH TRANSITION/ANIMATION ON ITS COLOUR... done, but animation on 
+       panel background image, not the border (looked better than animated border)
+
+
+
+-->
+    <main id="latest_book">
+        <p id="main_heading">OUT NOW - the latest Case and Kat thriller</p>
+        <img src="images/Concurrent_Execution_400px-width.jpg">
+        <div id="latest_description">When a bloodied man turns up at Case's front door, 
+            it's the start of a threat to Case himself, the agency he works for, and the 
+            most spectacular cyber threat of Case's career. With no one on his side but Kat, 
+            can he possibly save the day?
+        </div>
+    </main>
+    <section id="books_overview"></section>
+
+    <!-- register event listener for the burger icon -->
+    <script src="scripts/NavbarToggler.js"></script>
+</body>
+</html>

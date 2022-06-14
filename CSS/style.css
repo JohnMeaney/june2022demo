@@ -1,0 +1,165 @@
+body {
+    background-image: linear-gradient(to right, rgb(129, 118, 118), rgb(80, 36, 36));
+}
+
+/* pseudo-animated gradient for background image (gradients are always images)...
+... achieved by having transparency in the gradient of the image, and an underlying
+background colour that is animated. */
+
+header#top-banner {
+/*    background-image: radial-gradient(at bottom center, white,  transparent); */
+    background-color: black;
+    color:rgb(236, 221, 9);
+    font-family: sans-serif;
+    text-align: center;
+    padding-bottom: 2em;
+    padding-top: 3em;
+/*    animation-name: morphUnderlyingColour;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; */
+}
+
+@keyframes morphUnderlyingColour {
+    from {
+        background-color: rgb(14, 46, 2);
+    } 
+    to {
+        background-color: rgb(70, 30, 60);
+    }
+}
+
+#author-name {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    font-size: 3em;
+    font-weight: 900;
+    text-shadow: 1px 1px rgb(39, 13, 3), 0 0 20px  rgb(90, 24, 65);    
+}
+
+#author-genres {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgb(39, 13, 3), 3px 3px 5px rgb(59, 18, 1);
+}
+
+
+/* 
+    ============================================================
+    the navbar stuff follows: burger icon and navbar proper
+    ============================================================
+ */
+
+/* 1) the burger icon (burger bar is the container panel)  */
+
+#burger-bar {
+    width: 100%;
+    background-color: black;
+}
+
+#burger-icon {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 2em;
+    cursor: pointer;
+    background-color: black;
+    padding: 0.3em 0.2em;
+}
+
+.burger-line {
+    width: 2em;
+    height: 0.3em;
+    background-color: yellow;
+    margin: 0.3em 0;
+}
+
+/* 2) the navbar itself */
+
+#topnav {
+    background-color: black;
+}
+
+#topnav a {
+    color: yellow;
+    font-family: sans-serif;
+}
+
+
+#topnav.initial-state {
+    display: none;
+}
+
+#topnav.showing-mobile {
+    display: flex;
+    flex-direction: column;
+}
+
+#topnav.showing-mobile > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0.3em 0;
+    margin-left: 30%;
+}
+
+/* for monitors: */
+@media screen and (min-width: 63em){
+    
+    #burger-icon {
+        display: none;
+    }
+
+    #topnav.initial-state {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #topnav.initial-state > a {
+        flex: 1 1 4em;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.5em;
+        padding: 0.3em 1em;
+    }
+    
+}
+
+
+/* main content: the latest book just out */
+#latest_book {
+    background-image: radial-gradient(at bottom center, white,  transparent);
+    color: rgb(236, 221, 9);
+    font-family: sans-serif;
+    text-align: center;
+    padding-bottom: 2em;
+    padding-top: 3em;
+    animation-name: morphUnderlyingColour2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+#main_heading {
+    font-size: 1.8em;
+    color: white;
+}
+
+#latest_description {
+    font-size: 1.2em;
+    color:midnightblue;
+}
+
+@keyframes morphUnderlyingColour2 {
+    from {
+        background-color: rgb(14, 46, 2);
+    } 
+    to {
+        background-color: rgb(70, 30, 60);
+    }
+
+}
